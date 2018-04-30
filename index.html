@@ -1,0 +1,42 @@
+<html>
+    <title>
+        Crypto Difference
+    </title>
+    <head>
+       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+       <style>
+            table {
+                border-collapse: collapse;
+            }
+            th, td {
+                padding: 10px;
+                padding-left: 50px;
+                padding-right: 50px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+                font-size: 20px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            tr:hover{background-color:#f5f5f5}
+            </style>
+    </head>
+
+    <body>
+        <script src="zebpay.controller.js"></script>
+        <div ng-app="myApp" ng-controller="zebpayCtrl">
+            <table>
+                <tr>
+                    <th>Crypto Currency</th>
+                    <th>Buy Rate @Zebpay</th>
+                    <th>Buy Rate @Coindesk</th>
+                </tr>
+                <tr>
+                    <td>Bitcoin</td>
+                    <td ng-init="zebpay_buy_inr='--'">{{zebpay_buy_inr}}</td>
+                    <td ng-init="coindesk_buy_inr='--'">{{coindesk_buy_inr}}</td>
+                </tr>
+
+            </table>          
+        </div>
+    </body>
+</html>
