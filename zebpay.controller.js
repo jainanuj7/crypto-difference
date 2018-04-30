@@ -8,6 +8,7 @@ app.controller('zebpayCtrl', function ($scope, $http, $interval) {
                 $scope.zebpay_buy_inr = zebpayResults.data.buy;
         })
     }
+    ZebpayAPI();
     $interval(ZebpayAPI, 15000);
 
     //Coindesk BTC API
@@ -18,6 +19,7 @@ app.controller('zebpayCtrl', function ($scope, $http, $interval) {
                 $scope.coindesk_buy_inr = Math.round($scope.coindesk_buy_usd * $scope.oneUSDtoINR);
             })
     }
+    CoindeskAPI();
     $interval(CoindeskAPI, 15000);
 
     //Converting USD to INR using FIXER API
