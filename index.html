@@ -26,13 +26,15 @@
         <div ng-app="myApp" ng-controller="zebpayCtrl">
             <table>
                 <tr>
+                    <th>#</th>
                     <th>Crypto Currency</th>
                     <th>Buy Rate @Zebpay</th>
                     <th>Buy Rate @Coindesk</th>
                     <th>Difference</th>
                 </tr>
                 <tr>
-                    <td>Bitcoin</td>
+                    <td>12</td>
+                    <td> <img src="img/btc.png">  Bitcoin</td>
                     <td ng-init="zebpay_buy_inr=0">{{zebpay_buy_inr}} INR</td>
                     <td ng-init="coindesk_buy_inr=0">{{coindesk_buy_inr}} INR </td>
                     <td>{{zebpay_buy_inr - coindesk_buy_inr}} INR </td>
